@@ -1,0 +1,127 @@
+.paging {
+    margin: 30px 0 0;
+    font-size: 0;
+    text-align: center;
+    margin-top: 47px;
+}
+.paging a, .paging span.active {
+    display: inline-block;
+    min-width: 41px;
+    height: 41px;
+    padding: 0 8px;
+    font-size: 18px;
+    line-height: 41px;
+    border-radius: 40%;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.paging a, .paging span.active {
+    font-size: 16px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.paging .pag-prev, .paging .pag-next, .paging .pag-first, .paging .pag-last {
+    min-width: 38px;
+    margin: 0 5px;
+}
+.pag-prev::before, .pag-next::before, .pag-first::before, .pag-last::before, .pag-first::after, .pag-last::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+.pag-prev::before, .pag-first::before, .pag-first::after {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 3px;
+    border: 0 solid #333;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+}
+.pag-prev::before, .pag-first::before {
+    margin-left: 6px;
+}
+.pag-prev::before, .pag-first::before, .pag-first::after {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+.pag-first::after, .pag-last::after {
+    margin-left: -5px;
+}
+.paging .num a.active, .paging .num .active {
+    background-color: #a59f99;
+    color: #fff;
+    box-shadow: 1px 1px 3px #786d5d;
+}
+.paging a + a, .paging a + .active, .paging .active + a {
+    margin-left: 5px;
+}
+.paging .num a {
+    display: inline-block;
+    background-color: #d3cdc6;
+    box-shadow: 1px 1px 3px #93897c;
+}
+.paging .num a:hover {
+    color: #fffff6;
+    background-color: #a59f99;
+    box-shadow: inset 1px 1px 3px #786d5d;
+}
+.pag-prev::before, .pag-first::before, .pag-first::after {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+.pag-prev::before, .pag-first::before, .pag-first::after {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+.pag-prev::before, .pag-first::before, .pag-first::after {
+    margin-top: 15px;
+    border: 0 solid #a79784;
+    border-width: 0 0 2px 2px;
+    box-shadow: -1px 2px 2px -1px #f1ebe4;
+    transform: rotate(45deg);
+}
+.pag-prev::before, .pag-next::before, .pag-first::before, .pag-last::before, .pag-first::after, .pag-last::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+.pag-next::before, .pag-last::before, .pag-last::after {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 3px;
+    border: 0 solid #333;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+}
+.pag-next::before, .pag-last::before {
+    margin-left: -6px;
+}
+.pag-next::before, .pag-last::before, .pag-last::after {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+.pag-next::before, .pag-last::before, .pag-last::after {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 3px;
+}
+.pag-first::after, .pag-last::after {
+    margin-left: -5px;
+}
+.pag-next::before, .pag-last::before, .pag-last::after {
+    margin-top: 15px;
+    border: 0 solid #a79784;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    box-shadow: 2px 0px 1px -1px #f1ebe4;
+}
