@@ -155,6 +155,7 @@ create table missing_find(
 <form name="list">
 	<input type="hidden" name="t_gubun">
 </form>
+<div class="contents">
 	<div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 		<ul>
 			<li data-act='tab' class="item"><a href="Donation"><span class="in">기부</span></a></li>
@@ -397,4 +398,5 @@ changeMap(mapArea,"",${t_dto.getLat()}, ${t_dto.getLng()});
 				<input type="button" onclick="goUpdate()" value="수정등록" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
 				<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
 			</div>
+</div>			
 <%@ include file = "../common_footer.jsp" %>

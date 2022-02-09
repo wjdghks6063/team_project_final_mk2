@@ -2,7 +2,15 @@
     pageEncoding="UTF-8"%>
 <!--##### // Visual & LNB #####-->
 <%@ include file = "../common_header_yw.jsp" %>
+<link rel="stylesheet" type="text/css" href="css/css_pyw/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subb.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subba_yw.css" />
 
+<!--서브 헤더 -->
+	<div class="sub-header sub-header-notice">
+		<h1 class="sub-title"><span class="text">FAQ</span></h1>
+		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
+	</div>
 
 <c:if test="${session_id ne t_dto.getQ_reg_id() && t_dto.getSecret() ne 'n' && session_level ne 'top'}">
 	<script type="text/javascript">
@@ -65,9 +73,9 @@ function goQDelete(){
 	<input type="hidden" name="t_session_id" >
 	<input type="hidden" name="t_dum" >
 	
-	
 </form>
 
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item"><a href="Notice"><span class="in">공지사항</span></a></li>
@@ -89,7 +97,6 @@ function goQDelete(){
 		
 			<c:choose>
 				<c:when test="${empty t_dto.getA_content()}">
-					<p></p>
 					<br>
 					<p style="font-weight:bold"><span class="waiting">답변대기</span></p>
 					<br>
@@ -97,7 +104,6 @@ function goQDelete(){
 					
 				</c:when>
 				<c:otherwise>
-					<p></p>
 					<br>
 					<hr size=10px; color="#007dc6">
 					<br>
@@ -328,4 +334,5 @@ table,th,tr,td {border-collapse:collapse;}
 fieldset {border:0 none;}
 </style>
 
+</div>
 <%@ include file = "../common_footer.jsp" %>

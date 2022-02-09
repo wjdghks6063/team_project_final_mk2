@@ -58,7 +58,7 @@
 
 </form>
 
-
+<div class="contents">
 	<div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item"><a href="Notice"><span class="in">공지사항</span></a></li>
@@ -84,7 +84,6 @@
 	}
 	.n_title{
 		width:1140px;
-		height:28px;
 		text-align:left;
 		font:25px "myFont_1";
 		border-bottom:1px dotted gray;
@@ -182,14 +181,15 @@
 				</c:when>
 							
 				</c:choose>
+				${dtos.getTitle()}
+				</button>
 				
-				${dtos.getTitle()}</button>
 				<div class="text" style=" white-space:pre-line; >
 					<input type="hidden" name="t_no" value="${dtos.getNo()}">
 					<p style="line-height:2.2;"><?=$row["content"]?>${dtos.getContent()}</p>
 				<?if($session_level == 'top'){?>	
-				<p>	<a href="javascript:goDelete('${dtos.getNo()}')" style=" float:right; padding:5px; background:red; color:white" class="btn-write"><i class="fas fa-trash-alt"></i></a>&nbsp;&nbsp;&nbsp;
-					<a href="javascript:goUpdateForm('${dtos.getNo()}')" style=" float:right; padding:5px; background:green; color:white" class="btn-write"><i class="fas fa-wrench"></i></a></p>
+						<a href="javascript:goDelete('${dtos.getNo()}')" style=" float:right; padding:5px; background:red; color:white" class="btn-write"><i class="fas fa-trash-alt"></i></a>
+						<a href="javascript:goUpdateForm('${dtos.getNo()}')" style=" float: right; padding: 5px; background: green; color: white; position: relative; top: -19px; right: 5; class="btn-write"><i class="fas fa-wrench"></i></a>
 				<? } ?>
 				</div>
 				</c:forEach>
@@ -202,7 +202,7 @@
 	color: white;}
 .faq-box .accordion:after {content:"\02795"; /*unicode + 문자*/ font-size:13px; color:#777; float:right; margin-left:5px;}
 .faq-box .text{font-family:Nanum Barun Gothic;  background-color: #e9e7e6;
-    border: 1px solid #b4aeb9;	font-size:16px; padding:18px; width:90%; margin:0 auto; text-align:center; border:1px solid #E3CEF6; color:#444444; text-align:left; display:none;}
+    border: 1px solid #e9e7e6;	font-size:16px; padding:0 18px; width:90%; margin:0 auto; text-align:center; color:#444444; text-align:left; display:none;}
 
 </style>				
 	
@@ -240,6 +240,7 @@
 
 
 
+</div>
 </div>
 </body>
 <%@ include file = "../common_footer.jsp" %>

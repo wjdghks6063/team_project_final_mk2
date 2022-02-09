@@ -59,7 +59,7 @@ function goQDelete(){
 	
 	
 </form>
-
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item"><a href="Notice"><span class="in">공지사항</span></a></li>
@@ -195,5 +195,5 @@ $(document).ready(function(){
 </body>
 
 
-
+</div>
 <%@ include file = "../common_footer.jsp" %>

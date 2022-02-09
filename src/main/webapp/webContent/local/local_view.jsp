@@ -5,7 +5,7 @@
 
 <!--서브 헤더 -->
 	<div class="sub-header sub-header-give">
-		<h1 class="sub-title"><span class="text">지역늬우스</span></h1>
+		<h1 class="sub-title"><span class="text">지역 뉴스</span></h1>
 		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
 
 		
@@ -57,8 +57,8 @@
 			</ul>
 		</div>
 
-		<div class="board-view ty-2">
-			<div class="board-title">
+		<div class="board-view ty-3">
+			<div class="board-title1">
 				<h2 class="title" data-addtitle="this">
 				<c:if test="${dtos.getImportant() eq '1' }"	>
 					<span style="color:#1E90FF; font-weight:bold">[중요]</span>

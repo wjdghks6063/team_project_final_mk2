@@ -66,7 +66,7 @@ function showfield(name){
 </form>
 <!-- 서브 -->
    <div class="sub-header sub-header-give">
-      <h1 class="sub-title"><span class="text">기 부</span></h1>
+      <h1 class="sub-title"><span class="title_main">기 부</span></h1>
       <span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
    </div>
 <div class="contents">  

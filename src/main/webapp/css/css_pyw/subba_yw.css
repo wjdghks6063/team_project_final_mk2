@@ -89,7 +89,6 @@
 .tab-2:not([data-swipe]) ul { display:flex; }
 
 .tab-3 { position:relative; margin:25px -20px 30px; font-size:0; color:#888; text-align:center; }
-.contents > .tab-3:first-child { margin-top:-39px; margin-bottom:50px; }
 .contents > .tab-3:first-child::before { content:''; position:absolute; height:1px; background:#c8c8c8; }
 .tab-3::before { content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:#c8c8c8; }
 .tab-3 .item { flex:1; position:relative; display:inline-block; font-size:16px; text-align:center; }
@@ -791,7 +790,6 @@
 	.tab-3.fixed { height:60px; }
 	.tab-3.fixed ul { top:90px; width:100%; max-width:1400px; }
 	.tab-3.fixed .item a::before { min-height:60px; }
-	.contents > .tab-3:first-child { margin-top:-88px; margin-bottom:88px; }
     .contents > .tab-3:first-child.mgt_30 { margin-top:-88px; margin-bottom:50px;}
 	.tab-3 .item { font-size:20px; }
 	.tab-3 .item.active::before { height:3px; }

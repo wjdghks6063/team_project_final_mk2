@@ -6,7 +6,7 @@
 
 <!--서브 헤더 -->
 	<div class="sub-header sub-header-notice"><!-- sub-header 뒤에 이름 변경으로 이미지 변경 -->
-		<h1 class="sub-title"><span class="text">FAQ</span></h1>
+		<h1 class="sub-title"><span class="text">QnA</span></h1>
 		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
 	</div>
 <!-- 서브 헤더 끝 -->
@@ -52,8 +52,7 @@
 
 </form>
 
-
-
+<div class="contents">
 	<div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item"><a href="Notice"><span class="in">공지사항</span></a></li>
@@ -225,6 +224,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal; font-size:16px;}
 
 	<br>
 </div>
-	
+
+</div>
 </body>
 <%@ include file = "../common_footer.jsp" %>

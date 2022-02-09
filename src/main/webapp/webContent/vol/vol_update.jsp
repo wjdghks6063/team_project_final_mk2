@@ -2,14 +2,10 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file = "../common_header_yw.jsp" %>
+<link rel="stylesheet" type="text/css" href="css/css_pyw/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subb.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subba_yw.css" />
 
-<!--서브 헤더 -->
-	<div class="sub-header sub-header-give">
-		<h1 class="sub-title"><span class="text">봉 사</span></h1>
-		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
-
-		
-	</div>
 <script>
 	function goUpdate(){
 		if(checkValue(vol.t_title,"제목을 입력하세요")) return;
@@ -130,6 +126,11 @@
 	<input type="hidden" name="t_gubun">
 
 </form>
+<!--서브 헤더 -->
+	<div class="sub-header sub-header-give">
+		<h1 class="sub-title"><span class="text">봉 사</span></h1>
+		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
+	</div>
 <div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>

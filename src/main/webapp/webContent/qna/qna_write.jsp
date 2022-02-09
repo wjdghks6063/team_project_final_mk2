@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file = "../common_header_yw.jsp" %>
-
+<link rel="stylesheet" type="text/css" href="css/css_pyw/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subb.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subba_yw.css" />
 	<!-- sub contents -->
 <c:if test="${empty session_id}">
 	<script type="text/javascript">
@@ -42,6 +44,7 @@
 	<input type="hidden" name="t_gubun">
 
 </form>
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item"><a href="Notice"><span class="in">공지사항</span></a></li>
@@ -85,8 +88,8 @@
 					<tr>
 						<th>비공개 여부</th>
 						<td>
-						<input type="radio" name="t_secret" value="y">비밀글
-						<input type="radio" name="t_secret" value="n" checked>일반글
+						<input type="radio" name="t_secret" value="y" style="width:auto;">&nbsp&nbsp비밀글&nbsp&nbsp
+						<input type="radio" name="t_secret" value="n" style="width:auto;" checked>&nbsp&nbsp일반글
 						</td>
 						<th>등록 날짜</th>
 						<td><%=CommonUtil.getToday() %></td>
@@ -145,5 +148,5 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal; font-size:16px;}
 .waiting {background:#0489B1; color:#fff;padding:5px 8px;}
 
 </style>			
-
+</div>
 <%@ include file = "../common_footer.jsp" %>

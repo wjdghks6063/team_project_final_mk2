@@ -352,22 +352,6 @@
 	<div class="sub-content">
 		<div class="donation-box">
 		  <ul class="donation-img-list">
-                <li class="donation-card-list">
-                    <a href="" class="donation-card-a">
-                        <div class="donation-card-pic">
-                            <img loading="lazy" src="img/sub_img/thank.jpg" alt="" style="width:265px; height:200px; background-color:#ffb6c1;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
-                        </div>
-                        <div class="donation-card-content-box" style="background-color:#ffb6c1;">
-                            <strong class="donation-card-content-title">오늘 하루 여러분의 관심과 사랑입니다.</strong>
-                            <div class="donation-comp">총 모금 달성도</div>
-                            <div class="donation-parameter-bar">
-                                <span class="donation-parameter-green" style="width: 65%;"></span> <!--width 값 변화에 따라 게이지 량 변경-->
-                            </div>
-                            <strong class="donation-parameter-num">72%</strong>
-                            <strong class="donation-parameter-money">$366,222,230</strong>
-                        </div>    
-                    </a>
-                </li>
                 
 				<c:forEach items="${t_dtos}" var="dtos">	
 	                <li class="donation-card-list">

@@ -2,14 +2,10 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file = "../common_header_yw.jsp" %>
+<link rel="stylesheet" type="text/css" href="css/css_pyw/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subb.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subba_yw.css" />
 
-<!--서브 헤더 -->
-	<div class="sub-header vis-etc">
-		<h1 class="sub-title"><span class="text">공 지 사 항</span></h1>
-		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
-
-		
-	</div>
 <script>
 	function goSave(){
 		//썸머
@@ -125,15 +121,23 @@
 });
 </script>
 <form name="list">
-	
 	<input type="hidden" name="t_gubun">
-
 </form>
+
+<!--서브 헤더 -->
+	<div class="sub-header sub-header-notice"><!-- sub-header 뒤에 이름 변경으로 이미지 변경 -->
+		<h1 class="sub-title"><span class="text">공 지 사 항</span></h1>
+		<span class="deco-box">
+			<i class="deco-1"></i><i class="deco-2"></i>
+		</span>
+	</div>
+<!-- 서브 헤더 끝 -->
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item active"><a href="Notice"><span class="in">공지사항</span></a></li>
 				<li data-act='tab' class="item"><a href="FAQ"><span class="in">빠른답변</span></a></li>
-				<li data-act='tab' class="item"><a href="QnA"><span class="in">질의응답</span></a></li>
+				<li data-act='tab' class="item"><a href="Qna"><span class="in">질의응답</span></a></li>
 				
 			</ul>
 		</div>
@@ -235,5 +239,5 @@
 			</div>
 			
 			
-
+</div>
 <%@ include file = "../common_footer.jsp" %>

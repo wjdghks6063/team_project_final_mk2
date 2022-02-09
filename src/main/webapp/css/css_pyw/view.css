@@ -11,7 +11,7 @@
 
 /*메인 박스 */
 .contents {
-    max-width: 1440px; /*1140px으로 변경 여부*/
+    max-width: 1140px; /*1140px으로 변경 여부*/
     padding: 88px 20px 130px;
     margin: 0 auto;
 }
@@ -140,9 +140,19 @@
 
 /*페이지 틀 및 제목---------------------------------------------------*/
 .board-view.ty-2 {
+	/*
     padding-right: 360px;
     width: 1140px;
     margin: 0 auto;
+    z-index: 100;
+    */
+    padding-right: 360px;
+    width: 1140px;
+    margin: 0 50px;
+    z-index: 100;
+}
+.board-view.ty-3 {
+    width: 1140px;
     z-index: 100;
 }
 .board-view {
@@ -182,12 +192,46 @@
     font-weight: 500;
     font-family: 'Montserrat';
 }
+
+/*지역 뉴스용*/
+.board-title {
+    position: relative;
+    margin: 0 0 27px;
+}
+
+.board-title1 {
+    padding-top: 9px;
+    margin-bottom: 25px;
+    margin: 0 50px;
+}
+.board-title1 .title {
+    font-size: 42px;
+    line-height: 1.28;
+    color: #000;
+    font-weight: inherit; /*글씨 얇게*/
+}
+
+.board-title1 .title-sub {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #000;
+}
+
+.board-title1 .date {
+    display: block;
+    margin-top: 44px;
+    font-size: 16px;
+    line-height: 1;
+    color: #888;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
 /*내용-----------------------------------------*/
 
 .board-side { /*기부 박스 위치 조정*/
     position: static;
     margin: 0px -510px 0 auto;
-    
     display: inline-block;
     position: sticky;
     top: 120px;
@@ -200,10 +244,16 @@
 }
 
 .board-side .inner {
+	/*
     position: absolute;
     top: -232%;
     padding-top: 113px;
     left: 300%;
+    */
+    position: absolute;
+    top: -232%;
+    padding-top: 115px;
+    left: 270%;
 }
 
 /*왼쪽 기부 창*/

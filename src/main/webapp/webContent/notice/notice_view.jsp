@@ -42,21 +42,30 @@
 
 	<input type="hidden" name="t_session_id" >
 	<input type="hidden" name="t_dum" >
-	
-	
 </form>
 
+<!--서브 헤더 -->
+	<div class="sub-header sub-header-notice"><!-- sub-header 뒤에 이름 변경으로 이미지 변경 -->
+		<h1 class="sub-title"><span class="text">공 지 사 항</span></h1>
+		<span class="deco-box">
+			<i class="deco-1"></i><i class="deco-2"></i>
+		</span>
+	</div>
+<!-- 서브 헤더 끝 -->
+
+
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item active"><a href="Notice"><span class="in">공지사항</span></a></li>
 				<li data-act='tab' class="item"><a href="FAQ"><span class="in">빠른답변</span></a></li>
-				<li data-act='tab' class="item"><a href="QnA"><span class="in">질의응답</span></a></li>
+				<li data-act='tab' class="item"><a href="Qna"><span class="in">질의응답</span></a></li>
 				
 			</ul>
 </div>
 
-		<div class="board-view ty-2">
-			<div class="board-title">
+		<div class="board-view ty-3">
+			<div class="board-title1">
 				<h2 class="title" data-addtitle="this">
 				<c:if test="${t_dto.getImportant() eq '1' }"	>
 					<span style="color:#1E90FF; font-weight:bold">[중요]</span>
@@ -152,6 +161,7 @@ function clip(){
 }
 </script>
 
+</div>
 </div>
 </body>
 

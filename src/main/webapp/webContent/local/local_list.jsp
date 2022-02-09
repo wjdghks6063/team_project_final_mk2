@@ -100,7 +100,7 @@
           
 		  <!-- table start-->
 			<div class="table-box">
-				<table class="table">
+				<table class="table1">
 					<caption></caption>
 					<colgroup>
 						<col width="25%">

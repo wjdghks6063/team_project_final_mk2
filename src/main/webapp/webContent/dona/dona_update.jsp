@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<link rel="stylesheet" type="text/css" href="css/css_pyw/sub.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subb.css" />
+<link rel="stylesheet" type="text/css" href="css/css_pyw/subba_yw.css" />
 <%@ include file = "../common_header_yw.jsp" %>
 
 <script>
@@ -123,6 +125,12 @@
 	<input type="hidden" name="t_gubun">
 
 </form>
+<!--서브 헤더 -->
+   <div class="sub-header sub-header-give">
+      <h1 class="sub-title"><span class="title_main">기 부</span></h1>
+      <span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
+   </div>
+<div class="contents">
 <div class="tab-3" data-swipe='{"type":"case1","start":".active"}'>
 			<ul>
 				<li data-act='tab' class="item active"><a href="Donation"><span class="in">기부</span></a></li>
@@ -257,5 +265,5 @@
 			</div>
 			
 			
-
+</div>
 <%@ include file = "../common_footer.jsp" %>

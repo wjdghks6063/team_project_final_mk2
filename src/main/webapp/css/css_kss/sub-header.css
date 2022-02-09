@@ -32,17 +32,8 @@
 .sub-header.sub-header-give {
     background-image:url("../../img/sub-header.png");
 }
-.sub-header.vis-news { 
-    background-image:url("/resources/images/sub/vis-news.jpg"); 
-}
-.sub-header.vis-about { 
-    background-image:url("/resources/images/sub/vis-about.jpg"); 
-}
-.sub-header.vis-mypage { 
-    background-image:url("/resources/images/sub/vis-mypage.jpg"); 
-}
-.sub-header.vis-etc { 
-    background-image:url("/resources/images/sub/vis-etc.jpg"); 
+.sub-header.sub-header-give {
+    background-image:url("../../img/sub-header-banner-missing.png");
 }
 .sub-header.vis-mypage::before, .sub-header.vis-etc::before { 
     display:none; 
@@ -73,7 +64,7 @@
     z-index:5; 
     top:50%; 
     transform:translateY(-50%); 
-    font-family:'Montserrat'; 
+    font-family: 'maru-buri-reg';
     font-weight:700; 
     font-size:31px; 
     color:#fff; 

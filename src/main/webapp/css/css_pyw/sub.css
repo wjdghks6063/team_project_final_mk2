@@ -205,12 +205,21 @@ h1.menu-bar {
 
 /* sub-write css*/
 .sub-write {width:1140px; padding:20px 20px 130px 20px; margin:0 auto;  }
-.table {border:1px solid #e1e1e1; margin:0 auto; background:#fff; text-align: center;}
+.table {border:1px solid #e1e1e1; margin:0 auto; background:#fff; /*text-align: center;*/}
 .table .title {width:95%; height:40px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px;}
 .table .cont {width:95%; height:200px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px; background-color:#fff;}
 .table th {background:#f0f0f0; border:NONE; } 
 .table td {border:none; }
 .table .file {width:95%; height:40px; margin:10px; border:none; font-size:12px; font-family: 'Dongle';   background-color:#fff;}
+/*목록용*/
+
+.table1 {border:1px solid #e1e1e1; margin:0 auto; background:#fff; text-align: center;}
+.table1 .title {width:95%; height:40px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px;}
+.table1 .cont {width:95%; height:200px; padding:10px; margin:10px; border:none; font-family: 'Dongle'; font-size:15px; background-color:#fff;}
+.table1 th {background:#f0f0f0; border:NONE; } 
+.table1 td {border:none; }
+.table1 .file {width:95%; height:40px; margin:10px; border:none; font-size:12px; font-family: 'Dongle';   background-color:#fff;}
+.table1 thead tr {text-align: center; height: 45px; background: #edebed;}
 input.btn {
     float: right;
     width: 95px;

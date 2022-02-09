@@ -80,7 +80,6 @@
 	}
 	.n_title{
 		width:1140px;
-		height:28px;
 		text-align:left;
 		font:25px "myFont_1";
 		border-bottom:1px dotted gray;

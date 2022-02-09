@@ -36,7 +36,7 @@
     background-image:url("../../img/sub-header.png"); 
 }
 .sub-header.sub-header-vol { 
-    background-image:url("../../img/sub-header.png"); 
+    background-image:url("../../img/sub-header-banner-vol.png"); 
 }
 .sub-header.sub-header-notice { 
     background-image:url("../../img/sub-header.png"); 
@@ -75,7 +75,7 @@
     z-index:5; 
     top:50%; 
     transform:translateY(-50%); 
-    font-family:'Montserrat'; 
+    font-family: 'maru-buri-reg';
     font-weight:700; 
     font-size:31px; 
     color:#fff; 
