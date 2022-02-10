@@ -65,7 +65,7 @@ function showfield(name){
 	<input type="hidden" name="t_search" value="${t_search}">
 </form>
 <!-- 서브 -->
-   <div class="sub-header sub-header-give">
+   <div class="sub-header sub-header-dona">
       <h1 class="sub-title"><span class="title_main">기 부</span></h1>
       <span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
    </div>
@@ -158,9 +158,9 @@ function showfield(name){
 				
 				</div>
 			<div class="btn-area">
-				<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-				<input type="button" onclick="goUpdateForm()" value="수 정" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-				<input type="button" onclick="goDelete()" value="삭 제"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+				<input type="button" onclick="goList()" value="목 록"class="btn">
+				<input type="button" onclick="goUpdateForm()" value="수 정" class="btn">
+				<input type="button" onclick="goDelete()" value="삭 제"class="btn">
 			</div>
         </div>
     </div>

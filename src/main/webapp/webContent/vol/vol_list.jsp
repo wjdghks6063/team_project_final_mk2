@@ -175,6 +175,7 @@ a.card_today_inner:hover {
     position: relative;
     right: 160px;
 }
+
 </style>
 
 	<div class="sub-content">
@@ -225,7 +226,7 @@ a.card_today_inner:hover {
 			%>
 	</div>	
 	<br>
-	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn">
+	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn list_btn">
 							
 
 

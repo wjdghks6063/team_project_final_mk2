@@ -52,7 +52,7 @@
 </form>
 
 <!--서브 헤더 -->
-   <div class="sub-header sub-header-give">
+   <div class="sub-header sub-header-dona">
       <h1 class="sub-title"><span class="title_main">기 부</span></h1>
       <span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
    </div>
@@ -169,6 +169,7 @@ a.card_today_inner:hover {
     font-weight: 700;
     color: #fff;
 }
+
 </style>	
 	
 	<div class="sub-content">
@@ -198,7 +199,7 @@ a.card_today_inner:hover {
                           	 <c:set var="gage" value="${dtos.getTotal() / dtos.getGoal() *100}"/>
                           		<c:choose>
                           			<c:when test="${gage < 100 }"> 
-                                		<span class="donation-parameter-green" style="width:<fmt:formatNumber  pattern="###" value="${gage}" /> %;" max="100%"></span> <!--width 값 변화에 따라 게이지 량 변경-->
+                                		<span class="donation-parameter-green" style="width:<fmt:formatNumber  pattern="###" value="${gage}" />%;" max="100%"></span> <!--width 값 변화에 따라 게이지 량 변경-->
                                 	</c:when>
                                 	<c:when test="${gage >= 100 }">
                                 		<span class="donation-parameter-blue" style="width:100%;" max="100%";></span> <!--width 값 변화에 따라 게이지 량 변경-->
@@ -241,7 +242,7 @@ a.card_today_inner:hover {
 	
 	<br>
 	<c:if test="${session_level eq 'top'}">
-	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn">
+	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn list_btn">
 	</c:if>
 
 

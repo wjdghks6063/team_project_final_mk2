@@ -29,14 +29,17 @@
     background:url("../../img/sub-header-deco-2.png") 0 0 no-repeat; background-size:cover;
 }
 /*서브 헤더 이미지 div class에 따라 이미지 변경 */
-.sub-header.sub-header-give {
-    background-image:url("../../img/sub-header.png");
+.sub-header.sub-header-dona {
+    background-image:url("../../img/sub-header-banner-dona.png");
 }
 .sub-header.sub-header-local { 
-    background-image:url("../../img/sub-header.png"); 
+    background-image:url("../../img/sub-header-banner-local.png"); 
 }
 .sub-header.sub-header-vol { 
     background-image:url("../../img/sub-header-banner-vol.png"); 
+}
+.sub-header.sub-header-company { 
+    background-image:url("../../img/sub-header-banner-company.png"); 
 }
 .sub-header.sub-header-notice { 
     background-image:url("../../img/sub-header.png"); 

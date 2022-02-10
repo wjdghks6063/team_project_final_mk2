@@ -24,7 +24,7 @@ public class DBConnection {
 	
 		String DB_URL ="jdbc:oracle:thin:@115.93.111.2:1521:xe";
 		String DB_USER ="dbgive";
-		String DB_PASSWORD ="1234";		
+		String DB_PASSWORD ="1234";
 		
 		Connection con = null;
 		try {

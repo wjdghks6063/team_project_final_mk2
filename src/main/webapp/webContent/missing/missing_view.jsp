@@ -214,9 +214,9 @@ create table missing_find(
 						</table>
 					</fieldset>
 				</form>
-				<input type="button" onclick="goDelete()" value="삭 제" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-				<input type="button" onclick="goUpdateForm()" value="수 정" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-				<input type="button" onclick="javascript:history.back()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+				<input type="button" onclick="goDelete()" value="삭 제" class="btn">
+				<input type="button" onclick="goUpdateForm()" value="수 정" class="btn">
+				<input type="button" onclick="javascript:history.back()" value="목 록"class="btn">
 			</div>
 </div>
 <%@ include file = "../common_footer.jsp" %>

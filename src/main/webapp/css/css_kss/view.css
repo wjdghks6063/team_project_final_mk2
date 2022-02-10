@@ -592,20 +592,25 @@
 }
 
 input.btn {
-    float: right;
-    width: 95px;
-    height: 40px;
-    border: 1px solid #dcddc;
-    background: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 10px;
     font-family: 'maru-buri-reg';
-    background-color: #f1ebe4;
-    box-shadow: 1px 1px 3px #9e978e;
-    color: #79726a;
-    font-weight: bolder;
-    text-shadow: 1px 1px 2px #afa79a66;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 25px;
+    border: 1px solid #e1e1e5;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 150%;
+    color: #605f5f;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    background: no-repeat;
+    width: auto;
+    text-shadow: none;
+    font-size: 14px;
+    box-shadow: none;
+    font-weight: 600;
 }
 
 input.btn:hover {

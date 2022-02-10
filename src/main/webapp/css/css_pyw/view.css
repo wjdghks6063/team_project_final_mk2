@@ -12,7 +12,7 @@
 /*메인 박스 */
 .contents {
     max-width: 1140px; /*1140px으로 변경 여부*/
-    padding: 88px 20px 130px;
+    padding: 88px 20px;
     margin: 0 auto;
 }
 
@@ -637,20 +637,25 @@
 }
 
 input.btn {
-    float: right;
-    width: 95px;
-    height: 40px;
-    border: 1px solid #dcddc;
-    background: 0 none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 10px;
     font-family: 'maru-buri-reg';
-    background-color: #f1ebe4;
-    box-shadow: 1px 1px 3px #9e978e;
-    color: #79726a;
-    font-weight: bolder;
-    text-shadow: 1px 1px 2px #afa79a66;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 25px;
+    border: 1px solid #e1e1e5;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 150%;
+    color: #605f5f;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    background: no-repeat;
+    width: auto;
+    text-shadow: none;
+    font-size: 14px;
+    box-shadow: none;
+    font-weight: 600;
 }
 
 input.btn:hover {
@@ -658,4 +663,34 @@ input.btn:hover {
     background-color: #bbb6b3;
     box-shadow: inset 1px 1px 3px #8e7f6d;
     transition: background-color .3s, border .3s, color .3s, margin .3s;
+}
+
+input.btn.list_btn {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 25px;
+    border: 1px solid #e1e1e5;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 150%;
+    color: #0a0a0a;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    background: no-repeat;
+    width: auto;
+    left: -90px;
+    text-shadow: none;
+}
+
+input.btn.list_btn:hover {
+    color: #fffff6;
+    background-color: #bbb6b3;
+    box-shadow: inset 1px 1px 3px #8e7f6d;
+    transition: background-color .3s, border .3s, color .3s, margin .3s;
+}
+
+.button_group {
+    padding: 30px 0px;
 }

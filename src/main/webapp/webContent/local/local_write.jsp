@@ -236,8 +236,8 @@
 							</table>
 					</fieldset>
 				</form>
-								<input type="button" onclick="goSave()" value="등 록" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-								<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+								<input type="button" onclick="goSave()" value="등 록" class="btn">
+								<input type="button" onclick="goList()" value="목 록"class="btn">
 			</div>
 			
 			
