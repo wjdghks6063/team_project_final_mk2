@@ -705,7 +705,17 @@ public class Manager_dao {
 	//오늘의 기부 목록 (아동,노인 카테고리 포함, 일간 금액 표시)
 	public ArrayList<Manager_dto> getSearchList() {
 		ArrayList<Manager_dto> list = new ArrayList<>();
-		String query="select a.search_name as search, nvl(b.total_money,0) as item_money\r\n" + 
+		String query="select a.search_name as search, nvl(b.total_money,0) as item_money, nvl(b.people,0) as people \r\n" + 
+						"from dona_category a,\r\n" + 
+						"(select search, to_char(dona_date, 'yyyy-MM-dd'), sum(amount) AS total_money, COUNT(amount) as people\r\n" + 
+						"from mypage_dona_history\r\n" + 
+						"where to_char(dona_date, 'yyyy-MM-dd') = to_char(CURRENT_DATE, 'yyyy-MM-dd')\r\n" + 
+						"GROUP BY  search, to_char(dona_date, 'yyyy-MM-dd')) b\r\n" + 
+						"where a.search_code = b.search(+)\r\n" + 
+						"order by a.search_name asc";
+				
+				/* 총 후원 사람들까지 구해야 하기때문에 보류
+					"select a.search_name as search, nvl(b.total_money,0) as item_money\r\n" + 
 					" from dona_category a,\r\n" + 
 					" (select search, to_char(dona_date, 'yyyy-MM-dd'), sum(amount) AS total_money\r\n" + 
 					" from mypage_dona_history\r\n" + 
@@ -713,6 +723,7 @@ public class Manager_dao {
 					" GROUP BY  search, to_char(dona_date, 'yyyy-MM-dd')) b\r\n" + 
 					" where a.search_code = b.search(+)\r\n" + 
 					" order by a.search_name asc";
+				*/	
 		try {
 			con = DBConnection.getConnection();
 			ps = con.prepareStatement(query);
@@ -721,8 +732,9 @@ public class Manager_dao {
 			while(rs.next()) {
 				String search_code = rs.getString(1);
 				int item_money = rs.getInt(2);
+				int do_total = rs.getInt(3);
 				
-				list.add(new Manager_dto(search_code, item_money));
+				list.add(new Manager_dto(search_code, item_money, do_total));
 			}
 		} catch(SQLException e) {
 			e.printStackTrace();

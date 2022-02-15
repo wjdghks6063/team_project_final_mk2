@@ -395,8 +395,10 @@ changeMap(mapArea,"",${t_dto.getLat()}, ${t_dto.getLng()});
 						</table>
 					</fieldset>
 				</form>
-				<input type="button" onclick="goUpdate()" value="수정등록" class="btn">
-				<input type="button" onclick="goList()" value="목 록"class="btn">
+					<div class="button_group">
+						<input type="button" onclick="goUpdate()" value="수정등록" class="btn">
+						<input type="button" onclick="goList()" value="목 록"class="btn">
+					</div>
 			</div>
 </div>			
 <%@ include file = "../common_footer.jsp" %>

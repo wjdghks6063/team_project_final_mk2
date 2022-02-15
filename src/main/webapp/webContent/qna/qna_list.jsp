@@ -86,15 +86,15 @@
 			<colgroup>
 				<col width="5%">
 				<col width="5%">
-				<col width="40%">
+				<col width="*%">
 				<col width="10%">
-				<col width="7%">
-				<col width="30%">
-				<col width="3%">
+				<col width="10%">
+				<col width="20%">
+				<col width="8%">
 			</colgroup>
 			<thead>
 				<tr>
-					<th>비밀</th>
+					<th>공개</th>
 					<th>번호</th>
 					<th>제목</th>
 					<th>답변상태</th>
@@ -153,11 +153,11 @@
 		
 		 <c:if test="${empty session_id}">
 			
-			<input type="button"  onclick = "location.href = 'Qna' " value="로그인 후 작성해주세요" class="btn" style="width:250px;background-color:#f0f0f0;font-family: 'Dongle';">
+			<input type="button"  onclick = "location.href = 'Qna' " value="로그인 후 작성해주세요" class="btn">
 		</c:if>		
 		 <c:if test="${not empty session_id}">
 			
-			<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+			<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn">
 		</c:if>		
 		</div>
 	  </div>

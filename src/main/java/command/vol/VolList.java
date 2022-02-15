@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import common.Command;
 import common.CommonUtil;
 import dao.Dona_dao;
+import dao.Manager_dao;
 import dao.Vol_dao;
 import dto.Dona_dto;
 import dto.Vol_dto;
@@ -16,6 +17,11 @@ public class VolList implements Command {
 	@Override
 	public void execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
+		
+		Manager_dao managerdao = new Manager_dao();
+		request.setAttribute("Vol_list", managerdao.getVolToday());
+		request.setAttribute("list", managerdao.getSearchList());
+		
 		Vol_dao dao = new Vol_dao();
 		//검색기능
 		

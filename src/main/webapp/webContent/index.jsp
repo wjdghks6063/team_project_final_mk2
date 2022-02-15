@@ -19,6 +19,45 @@
 
 
 </head>
+ 
+ <script type="text/javascript">
+	
+	function goDonaView(no){
+		goPage.t_no.value=no;
+		goPage.t_gubun.value="View";
+		goPage.method="post";
+		goPage.action="Donation";
+		goPage.submit();
+	}
+	function goVolView(no){
+		goPage.t_no.value=no;
+		goPage.t_gubun.value="View";
+		goPage.method="post";
+		goPage.action="Volunteer";
+		goPage.submit();
+	}
+	
+	function goLocalView(no){
+		goPage.t_no.value=no;
+		goPage.t_gubun.value="View";
+		goPage.method="post";
+		goPage.action="LocalNews";
+		goPage.submit();
+	}
+	
+	function goMissingView(no){
+		goPage.t_no.value=no;
+		goPage.t_gubun.value="View";
+		goPage.method="post";
+		goPage.action="Missing";
+		goPage.submit();
+	}
+	
+</script>
+<form name="goPage">
+	<input type="hidden" name="t_no">
+	<input type="hidden" name="t_gubun">
+</form>
     
     <div class ="mainbanner-box">
         <div class ="mainbanner-background"> <!-- 이미지 색상 교체 박스 -->
@@ -106,10 +145,10 @@
                 </span>
             </p>
             <div class="mid-r-content-btn">
-                <a href="" class="r-btn">
+                <a href="Qna" class="r-btn">
                     <img src="" alt>2020년 기부금은 어디에 사용되었나요? >
                 </a>
-                <a href="" class="r-btn">
+                <a href="Qna" class="r-btn">
                     <img src="" alt>내 후원금은 잘 관리되고 있나요? >
                 </a>
                 
@@ -120,113 +159,66 @@
 
 <!-- 100% 전하는 기부-->
     <div class="donation-box">
-        <h3 class="donation-text-box"><a href="" class="donation-text">100% 전하는 기부 ></a></h3>    
+        <h3 class="donation-text-box"><a href="Donation" class="donation-text">100% 전하는 기부 ></a></h3>    
             <ul class="donation-img-list">
+                
+            
+           <c:forEach items="${t_dtos}" var="dtos">	
                 <li class="donation-card-list">
-                    <a href="" class="donation-card-a">
+                    <a href="javascript:goDonaView('${dtos.getNo()}')" class="donation-card-a">
                         <div class="donation-card-pic">
-                            <img loading="lazy" src="img/donation_1.png" alt="" style="width:265px; height:200px; object-fit: cover;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
+                            <img loading="lazy" src="donaimg/dona/${dtos.getAttach()}" alt="기부메인" style="width:265px; height:200px;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
                         </div>
                         <div class="donation-card-content-box">
-                            <strong class="donation-card-content-title">칠레 광부들의 무너진 일상을 일으켜 주세요</strong>
-                            <div class="donation-comp">라이스잇</div>
+                            <strong class="donation-card-content-title">${dtos.getTitle()}</strong>
+                            <div class="donation-comp">${dtos.getDominator()}</div>
                             <div class="donation-parameter-bar">
-                                <span class="donation-parameter-green" style="width: 65%;"></span> <!--width 값 변화에 따라 게이지 량 변경-->
-                            </div>
-                            <strong class="donation-parameter-num">65%</strong>
-                            <strong class="donation-parameter-money">66,222,230</strong><span>원</span>
-                        </div>    
-                    </a>
-                </li>
-                <li class="donation-card-list">
-                    <a href="" class="donation-card-a">
-                        <div class="donation-card-pic">
-                            <img loading="lazy" src="img/donation_2.png" alt="" style="width:265px; height:200px; object-fit: cover;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
-                        </div>
-                        <div class="donation-card-content-box">
-                            <strong class="donation-card-content-title">어르신들에게 따스함을 선물하세요.</strong>
-                            <div class="donation-comp">big present</div>
-                            <div class="donation-parameter-bar">
-                                <span class="donation-parameter-green" style="width: 65%;"></span> <!--width 값 변화에 따라 게이지 량 변경-->
-                            </div>
-                            <strong class="donation-parameter-num">65%</strong>
-                            <strong class="donation-parameter-money">66,222,230<span> 원</span></strong>
-                        </div>    
-                    </a>
-                </li>
-                <li class="donation-card-list">
-                    <a href="" class="donation-card-a">
-                        <div class="donation-card-pic">
-                            <img loading="lazy" src="img/donation_3.png" alt="" style="width:265px; height:200px; object-fit: cover;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
-                        </div>
-                        <div class="donation-card-content-box">
-                            <strong class="donation-card-content-title">산타클로스는 아이들이 있는 곳이라면 어디든지 갑니다.</strong>
-                            <div class="donation-comp">아이누리</div>
-                            <div class="donation-parameter-bar">
-                                <span class="donation-parameter-green" style="width: 65%;"></span> <!--width 값 변화에 따라 게이지 량 변경-->
-                            </div>
-                            <strong class="donation-parameter-num">65%</strong>
-                            <strong class="donation-parameter-money">66,222,230</strong></strong><span>원</span>
-                        </div>    
-                    </a>
-                </li>
-                <li class="donation-card-list">
-                    <a href="" class="donation-card-a">
-                        <div class="donation-card-pic">
-                            <img loading="lazy" src="img/donation_4.png" alt="" style="width:265px; height:200px; object-fit: cover;"> <!--이미지 박스 크기값 설정 및 크기에 맞지않을 경우 알아서 채우기 설정-->
-                        </div>
-                        <div class="donation-card-content-box">
-                            <strong class="donation-card-content-title">조금 서투를지라도 우리들은 행복합니다.</strong>
-                            <div class="donation-comp">대전 장애재활센터</div>
-                            <div class="donation-parameter-bar">
-                                <span class="donation-parameter-green" style="width: 65%;">  <!--width 값 변화에 따라 게이지 량 변경-->
-                                    <span class="donation-parameter-orange"></span> <!--반반 무많이 절반만 표시됨 -->
-                                </span>
-                            </div>
-                            <strong class="donation-parameter-num">65%</strong>
-                            <strong class="donation-parameter-money">66,222,230</strong>
-                        </div>    
-                    </a>
-                </li>
+                          	 <c:set var="gage" value="${dtos.getTotal() / dtos.getGoal() *100}"/>
+                          		<c:choose>
+                          			<c:when test="${gage < 100 }"> 
+                                		<span class="donation-parameter-green" style="width:<fmt:formatNumber  pattern="###" value="${gage}" />%;" max="100%"></span> <!--width 값 변화에 따라 게이지 량 변경-->
+                                	</c:when>
+                                	<c:when test="${gage >= 100 }">
+                                		<span class="donation-parameter-blue" style="width:100%;" max="100%";></span> <!--width 값 변화에 따라 게이지 량 변경-->
+                                	</c:when>
+                                </c:choose>			
+                             </div>
+                             	<c:choose>
+                             		<c:when test="${gage < 100 }"> 
+                           				<strong class="donation-parameter-num"><fmt:formatNumber  pattern="###" value="${gage}" /> % </strong>
+			                            <strong class="donation-parameter-money"><span style="color:#10c838;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
+			                            / <span style="color:#c0c0c0;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/> 원</span></strong>
+                           			</c:when>
+                           			
+                           			<c:when test="${gage >= 100 }"> 
+                           				<strong class="donation-parameter-num2"><fmt:formatNumber  pattern="###" value="${gage}" /> % </strong>
+			                            <strong class="donation-parameter-money"><span style="color: #00BFFF;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
+			                            / <span style="color:#c0c0c0;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/> 원</span></strong>
+                           			</c:when>
+                           		</c:choose>
+                        	</div>    
+	                   </a>
+	               </li>
+			</c:forEach>	  
             </ul>
     </div>
 
     <!--후원금 모금 현황-->
 
     <div class="ability-box">
-        <h3 class="donation-text-box"><a href="" class="donation-text">재능 기부 / 봉사 지원 ></a></h3>
-            <a href="" class="ability-content-a">
+        <h3 class="donation-text-box"><a href="" class="donation-text">봉사 모집 / 봉사 지원 ></a></h3>
+        <c:forEach items="${t_vdtos}" var="vdtos">   
+            <a href="javascript:goVolView('${vdtos.getNo()}')" class="ability-content-a">
                 <div class="ability-content-pic">
-                    <img loading="lazy" src="img/support_1.png" alt="" width="364" height="242" vertical-align: top;>
+                    <img loading="lazy" src="donaimg/vol/${vdtos.getAttach()}" alt="" width="364" height="242" vertical-align: top;>
                 </div>
                 <div class="ability-content-text-box">
-                    <div class="ability-content-compy">희망 배달연대</div>
-                    <strong class="ability-content-text">여러분의 마음과 열기를 전달해 주세요.</strong>
+                    <div class="ability-content-compy">${vdtos.getTitle()}</div>
+                    <strong class="ability-content-text">${vdtos.getVolunteersite()}</strong>
                     <img loading="lazy" src="img/logo.png" alt="" width="66" height="66" class="ability-content-small-img">
                 </div>
             </a>
-            <a href="" class="ability-content-a">
-                <div class="ability-content-pic">
-                    <img loading="lazy" src="img/support_2.png" alt="" width="364" height="242" vertical-align: top;>
-                </div>
-                <div class="ability-content-text-box">
-                    <div class="ability-content-compy">빅토리 봉사단</div>
-                    <strong class="ability-content-text">어르신들의 말동무가 되어주세요.</strong>
-                    <img loading="lazy" src="img/logo.png" alt="" width="66" height="66" class="ability-content-small-img">
-                </div>
-            </a>
-            <a href="" class="ability-content-a">
-                <div class="ability-content-pic">
-                    <img loading="lazy" src="img/support_3.png" alt="" width="364" height="242" vertical-align: top;>
-                </div>
-                <div class="ability-content-text-box">
-                    <div class="ability-content-compy">기부자 김미인</div>
-                    <strong class="ability-content-text">아이들의 미소를 그리러 갑니다.</strong>
-                    <span class="ability-content-gage">
-                        <span class="">100 %</span>
-                    </span>
-                </div>
-            </a>
+         </c:forEach>	   
     </div>
 
     <!-- 동영상 및 실종 아동 찾기-->
@@ -237,38 +229,16 @@
             <!--page slider -->
             <div class="news-slider">
                 <div class="post-wrapper">
+                  <c:forEach items="${t_ldtos}" var="ldtos">    
                     <div class="post">
-                        <a href="">
-                        <img src="img/cardnews-1.png" class="slider-image">
+           			    <a href="javascript:goLocalView('${ldtos.getNo()}')">
+                        <img src="donaimg/local/${ldtos.getAttach()}" class="slider-image">
                             <div class="post-info">
-                                <h4 class="card-news-text">코로나로 막힌 기분 대나무 숲을 거닐다.</h4>
+                                <h4 class="card-news-text">${ldtos.getTitle()}</h4>
                             </div>
                         </a>
-                    </div>
-                    <div class="post">
-                        <a href="">
-                        <img src="img/cardnews-2.png" class="slider-image">
-                            <div class="post-info">
-                                <h4 class="card-news-text">양반들의 행사 송도 양반축제</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="">
-                        <img src="img/cardnews-3.png" class="slider-image">
-                            <div class="post-info">
-                                <h4 class="card-news-text">아빠, 엄마 안녕하세요!</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="post">
-                        <a href="">
-                        <img src="img/cardnews-4.png" class="slider-image">
-                            <div class="post-info">
-                                <h4 class="card-news-text">위드코로나 종식 선언이 멀지 않았다.</h4>
-                            </div>
-                        </a>
-                    </div>
+           			</div>
+                  </c:forEach>
                 </div>
             </div>
         </div>
@@ -284,38 +254,20 @@
             <i class="fas fa-chevron-left child-prev"></i> <!--왼쪽 버튼-->
             <i class="fas fa-chevron-right child-next"></i> <!--오른쪽 버튼-->
                 <div class="child-wrapper">
+                     <c:forEach items="${t_mdtos}" var="mdtos">  
                     <div class="post">
-                        <img src="img/missingchild-1.png" class="slider-image">
+                        <img src="/donaimg/missing/${mdtos.getAttach()}" class="slider-image">
                         <div class="post-info">
-                            <h4 class="missing-child-title"><i class="far fa-user"></i> 이동훈 / 만 5세 / 대전</h4>
-                            <span class="missing-child-content">실종 일자 : 1983 / 11 / 20</span>
-                            <div class="tip-child">실종 아동 신고</div>
+                            <h4 class="missing-child-title"><i class="far fa-user"></i> ${mdtos.getName()} / 만 ${mdtos.getAge()}세 / ${mdtos.getLost_area()}</h4>
+                            <span class="missing-child-content">실종 일자 : ${mdtos.getLost_date()}</span>
+                            <a href="javascript:goMissingView('${mdtos.getNo()}')">
+                            	<div class="tip-child">실종 아동 보기</div>
+                            </a>
                         </div>
+                    
                     </div>
-                    <div class="post">
-                        <img src="img/missingchild-2.png" class="slider-image">
-                        <div class="post-info">
-                            <h4 class="missing-child-title"><i class="far fa-user"></i> 양서희 / 만 8세 / 충남</h4>
-                            <span class="missing-child-content">실종일자 : 2018 / 05 / 14</span>
-                            <div class="tip-child">실종 아동 신고</div>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <img src="img/missingchild-3.png" class="slider-image">
-                        <div class="post-info">
-                            <h4 class="missing-child-title"><i class="far fa-user"></i> 박윤희 / 만 8 세 / 인천</h4>
-                            <span class="missing-child-content">실종일자 : 2000 / 08 / 23</span>
-                            <div class="tip-child">실종 아동 신고</div>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <img src="img/missingchild-4.png" class="slider-image">
-                        <div class="post-info">
-                            <h4 class="missing-child-title"><i class="far fa-user"></i> 김은정 / 만 6 세 / 서울</h4>
-                            <span class="missing-child-content">실종일자 : 1987 / 08 / 06</span>
-                            <div class="tip-child">실종 아동 신고</div>
-                        </div>
-                    </div>
+                     </c:forEach>   
+                  
                 </div>
             </div>
         </div>
@@ -328,30 +280,39 @@
             <h3 class="donation-today-h3">오늘의 참여 현황</h3>
             <span class="donation-today-msg">여러분의 성원이 큰 힘이 됩니다.</span>
             <dl class="donation-today-text-box">
+            	<c:forEach items="${list}" var="list">
+            		<c:set var="total_do_people" value="${total_do_people + list.getDo_total()}" />
+            		<c:set var="total_money" value="${total_money + list.getItem_money()}" />
+            	</c:forEach>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money"></span> 명
+                        <span class="donation-t-money" id="myDoTotalPeople"></span> 명
                     </dd>
                 </div>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">기부 금액</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money"></span> 원
+                        <span class="donation-t-money" id="CashTotal"></span> 원
                     </dd>
                 </div>
+                	<c:forEach items="${Vol_list}" var="vol_list">
+						<c:set var="total_vol" value="${vol_list.getEnd_vol()}" />
+						<c:set var="total_vol_people" value="${vol_list.getTotal_vol()}" />
+					</c:forEach>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">봉사 일정</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money"></span> 개
+                        <span class="donation-t-money" id="myVolTotal"></span> 개
                     </dd>
                 </div>
                 <div class="donation-today-text-small-box">
                     <dt class="donation-t-msg-box">봉사 참여</dt>
                     <dd class="donation-t-num-box">
-                        <span class="donation-t-money"></span> 명
+                        <span class="donation-t-money" id="myVolTotalPeople"></span> 명
                     </dd>
                 </div>
+                	
             </dl>
         </div>
     </div>
@@ -416,8 +377,8 @@
         infinite: true,
         fade: true,
         dots : true,
-        arrows : false, 
-        cssEase: 'linear',
+        arrows : false,
+        autoplay: true,
         autoplaySpeed: 6000,
         dotsClass : "slick-dots_2"
     });
@@ -441,30 +402,51 @@
     */
 
     /* 후원 금액 숫자 순차적 증가*/
-    $({ val : 0 }).animate({ val : 150000 }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
-        duration: 1500,
+    
+     $({ val : 0 }).animate({ val : ${total_money} }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
         step: function() {
             var num = numberWithCommas(Math.floor(this.val)); 
-            $(".donation-t-money").text(num);
+            $("#CashTotal").text(num);
         },
         complete: function() {
             var num = numberWithCommas(Math.floor(this.val));
-            $(".donation-t-money").text(num);
+            $("#CashTotal").text(num);
         }
-        });
-
-        $({ val : 0 }).animate({ val : 1.5 }, { /*소숫점 표시시 사용*/
-        duration: 1000,
+    });
+    
+    $({ val : 0 }).animate({ val : ${total_do_people} }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
         step: function() {
-            var num = numberWithCommas(this.val.toFixed(1));
-            $(".count_num2").text(num);
+            var num = numberWithCommas(Math.floor(this.val)); 
+            $("#myDoTotalPeople").text(num);
         },
         complete: function() {
-            var num = numberWithCommas(this.val.toFixed(1));
-            $(".count_num2").text(num);
+            var num = numberWithCommas(Math.floor(this.val));
+            $("#myDoTotalPeople").text(num);
         }
     });
 
+    $({ val : 0 }).animate({ val : ${total_vol} }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
+        step: function() {
+            var num = numberWithCommas(Math.floor(this.val)); 
+            $("#myVolTotal").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(Math.floor(this.val));
+            $("#myVolTotal").text(num);
+        }
+    });
+    
+    $({ val : 0 }).animate({ val : ${total_vol_people} }, { /*val : 0 /시작 숫자 / val : 150000 종료 숫자 */
+        step: function() {
+            var num = numberWithCommas(Math.floor(this.val)); 
+            $("#myVolTotalPeople").text(num);
+        },
+        complete: function() {
+            var num = numberWithCommas(Math.floor(this.val));
+            $("#myVolTotalPeople").text(num);
+        }
+    });
+    
     function numberWithCommas(x) { //numberWithCommas 3자리마다 콤마
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
@@ -497,64 +479,4 @@ $(document).keydown(function(e) {
 
 </div>
 </body>
-<!--footer -->
-    <footer class="footer-box">
-        <div class="footer-top">
-            <dl class="footer-top-box">
-                <dt class="footer-top-notice"><a href="">공지사항</a></dt>
-                <dd class="foorer-top-notice-text">
-                    <a href="">회원 가입시 개인정보 관리 내역에 대해 안내해드립니다.<i class="icon-n"><i class="fab fa-envira"></i></i></a>
-                </dd>
-            </dl>
-        <div class="service-info-box" aria-hidden="false">
-            <dl class="service-info-first-line">
-                <dt class="service-info-first-line-title">해피빈 안내</dt>
-                <dd class="service-info-first-line-item"><a href="">해피빈 소개</a></dd>
-                <dd class="service-info-first-line-item"><a href="">콩받기 안내</a></dd>
-                <dd class="service-info-first-line-item"><a href="">해피빈 현황</a></dd>
-                <dd class="service-info-first-line-item"><a href="">콩구폰 입력</a></dd>
-            </dl>
-            <dl class="service-info-first-line">
-                <dt class="service-info-first-line-title">제휴∙단체안내</dt>
-                <dd class="service-info-first-line-item"><a href="">해피로그 가입</a></dd>
-                <dd class="service-info-first-line-item"><a href="">기업제휴 문의</a></dd>
-                <dd class="service-info-first-line-item"><a href="">펀딩 개설 신청</a></dd>
-            </dl>
-        </div>
-        </div>
-    
-        <div class="footer-info-box">
-            <div class="footer-info-inner">
-                <ul class="footer-info-list">
-                    <li class="footer-info-item"><a href="" target="해피빈 이용약관">해피빈 이용약관</a></li>
-                    <li class="footer-info-item"><a href="" target="개인정보처리방침"><strong>개인정보처리방침</strong></a></li>
-                    <li class="footer-info-item"><a href="" target="책임의 한계와 법적고지">책임의 한계와 법적고지</a></li>
-                    <li class="footer-info-item"><a href="" target="고객센터">고객센터</a></li>
-                    <li class="footer-info-item"><a href="" target="공익제보(행정안전부)">공익제보(행정안전부)</a></li>
-                </ul><br> <!--ul 끼리 붙어 있어 줄바꿈이 생기지 않아서 넣어줌-->
-                <ul class="footer-info-list">
-                    <li class="footer-info-item">제단법인 굿아이디어</li>
-                    <li class="footer-info-item">대표 : 최정우</li>
-                    <li class="footer-info-item">사업자 등록번호 :199-40-91928</li>
-                    <li class="footer-info-item">통신판매업신고 : 2015-대전충남-1994호</li>
-                </ul><br>
-                <address class="footer-info-address">대전 충남 대덕대로 150 11층 (갈마동,창원빌딩) 대표전화 : 1588-8282</address>
-                <small class="footer-info_notice">
-                    재능 기부 및 직접기부의 진행과 리워드 제공의 책임은 해당 프로젝트의 개설자에게 있습니다. 굿아이디어는 해당 프로젝트의 당사자가 아니며, 리워드 제공에 대한 책임을 지지 않습니다.
-                </small>
-                <div class="footer-info-copyright">
-                    <a href="" class="footer-info-logo">
-                        <img src="img/company.png" class="company-logo" alt="LOGO">
-                    </a> <br>
-                    <span class="Copyright">Copyright © G&I Corp. All Rights Reserved.</span>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-
-</div>
-</div>
-</div>      
-
-</html>
+<%@ include file = "common_footer.jsp" %>

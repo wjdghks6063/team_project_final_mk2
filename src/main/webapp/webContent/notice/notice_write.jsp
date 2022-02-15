@@ -234,8 +234,10 @@
 							</table>
 					</fieldset>
 				</form>
+							<div class="button_group">
 								<input type="button" onclick="goSave()" value="등 록" class="btn">
 								<input type="button" onclick="goList()" value="목 록"class="btn">
+							</div>	
 			</div>
 			
 			

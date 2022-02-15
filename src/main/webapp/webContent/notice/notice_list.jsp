@@ -103,17 +103,23 @@
 	}	
 .select_box{
 			width:1100px;
-			height:25px;
+			height:40px;
 			text-align:right;
 		//	background:yellow;
 		}
 		.sel_box{
-			width:80px;
-			height:22px;
+			width: 80px;
+		    height: 22px;
+		    border: 1px solid gray;
+		    font-family: 'Font Awesome 5 Free';
+		    margin-top: 5px;
 		}
 		.sel_text{
-			width:120px;
-			height:22px;
+			width: 120px;
+		    height: 22px;
+		    border: 1px solid gray;
+		    font-family: 'Font Awesome 5 Free';
+		    margin-bottom: 3px;
 		}	
 		.sel_button{
 			width:80px;

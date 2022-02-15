@@ -114,14 +114,21 @@
 		.sel_box{
 			width:80px;
 			height:22px;
+			border: 1px solid gray;
+		    font-family: 'Font Awesome 5 Free';
+		    margin-top: 5px;
 		}
 		.sel_text{
 			width:120px;
 			height:22px;
+			border: 1px solid gray;
+		    font-family: 'Font Awesome 5 Free';
+	        margin-bottom: 3px;
 		}	
 		.sel_button{
 			width:80px;
 			height:22px;
+		    font-family: 'Font Awesome 5 Free';
 		}
 .boardList{
 			width:100%;
@@ -220,7 +227,7 @@
 	
 	
 	<br>
-	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+	<input type="button" onclick="goWriteForm()" value="글 쓰 기" class="btn">
 								
 
 

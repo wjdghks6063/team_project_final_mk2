@@ -78,7 +78,7 @@
 								<th><label for="cont"> 내용</label></th>
 								
 								<td colspan="2"  >
-									<textarea name="t_content" style="width:850px;height:300px;" ></textarea>
+									<textarea name="t_content" style="width: 850px; height: 300px; border: 1px solid; margin: 10px; padding:10px;" ></textarea>
 								</td>
 							</tr>
 							
@@ -92,7 +92,7 @@
 							<tr>
 								
 								<th><label for="file">중요도</label></th>
-								<td colspan="2">
+								<td colspan="2" style="height:45px;">
 									<label><input type="radio"  name="t_important" value="0"  class="tser" checked style="border:1px solid #333333;">&nbsp 보통</label>
 									<label><input type="radio"  name="t_important" value="1"  class="tser" style="border:1px solid #333333">&nbsp 중요</label>
 									<label><input type="radio"  name="t_important" value="2"  class="tser" style="border:1px solid #333333">&nbsp 필수</label>
@@ -107,8 +107,10 @@
 							</table>
 					</fieldset>
 				</form>
-								<input type="button" onclick="goSave()" value="등 록" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-								<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+							<div class="button_group">
+								<input type="button" onclick="goSave()" value="등 록" class="btn">
+								<input type="button" onclick="goList()" value="목 록"class="btn">
+							</div>	
 			</div>
 			
 			

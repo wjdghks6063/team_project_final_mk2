@@ -75,13 +75,14 @@ public class Manager_dto {
 		this.item_money = item_money;
 	}
 	
-	/*카운트 용 숫자
-	public Manager_dto(String do_end_date, int do_total, int do_goal) {
-		this.do_end_date = do_end_date;
+	//오늘의 기부 이름과 금액 및 인원까지
+	public Manager_dto(String search_name, int item_money, int do_total) {
+		super();
+		this.search_name = search_name;
+		this.item_money = item_money;
 		this.do_total = do_total;
-		this.do_goal = do_goal;
 	}
-	*/
+
 	
 	//기부 일정 숫자 카운트
 	public Manager_dto(int do_total, int do_pro, int do_com, int do_end) {

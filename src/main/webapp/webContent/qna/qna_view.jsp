@@ -94,25 +94,6 @@ function goQDelete(){
 			<span class="user">${t_dto.getQ_reg_id()}</span> | ${t_dto.getQ_reg_date() } | <i class="fa fa-eye"></i> ${t_dto.getHit() }</p>
 			<div class="board_body">
 				<textarea class="texta" readonly="readonly">${t_dto.getQ_content() }</textarea>
-		
-			<c:choose>
-				<c:when test="${empty t_dto.getA_content()}">
-					<br>
-					<p style="font-weight:bold"><span class="waiting">답변대기</span></p>
-					<br>
-					<hr size=10px; color="#007dc6">
-					
-				</c:when>
-				<c:otherwise>
-					<br>
-					<hr size=10px; color="#007dc6">
-					<br>
-					<p style="font-weight:bold"><span  class="complet">답변완료</span></p>
-					<p class="info"><span class="answerr"></span>답변일자 | ${t_dto.getA_reg_date() }</p>
-					<textarea class="texta" readonly="readonly">${t_dto.getA_content()}</textarea>
-					<hr size=10px; color="#00616b">
-				</c:otherwise>
-			</c:choose>	
 <script type="text/javascript">
 //<![CDATA[
 $(document).ready(function(){
@@ -163,29 +144,29 @@ $(document).ready(function(){
 					<br>
 					<textarea name="t_answer" class="textArea_H120"></textarea>
 					
-					<input type="button" onclick="goAnswerSave()" value="답 변 저 장"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+					<input type="button" onclick="goAnswerSave()" value="답 변 저 장"class="btn">
 				</div>
 			</form>					
 			
 			</div>
-			<div class="btn_3wrap">
-					<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-				<c:choose>	
-					<c:when test="${session_id eq t_dto.getQ_reg_id() && empty t_dto.getA_content()}">
-							<input type="button" onclick="goQUpdate()" value="수 정" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-							<input type="button" onclick="goQDelete()" value="삭 제"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-					
-					</c:when>
-					<c:when test="${session_level eq 'top' && empty t_dto.getA_content()}">
-					<span class="answerButt">답변하기</span>
-					</c:when>
-					<c:when test="${session_level eq 'top' && not empty t_dto.getA_content() }">
-						
-						<input type="button" onclick="goAnswerDelete()" value="답 변 삭 제"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-						<span class="answerButt" >답변 수정</span> 
-						
-					</c:when>
-				</c:choose>	
+				<div class="button_group">
+					<input type="button" onclick="goList()" value="목 록"class="btn">
+						<c:choose>	
+							<c:when test="${session_id eq t_dto.getQ_reg_id() && empty t_dto.getA_content()}">
+									<input type="button" onclick="goQUpdate()" value="수 정" class="btn">
+									<input type="button" onclick="goQDelete()" value="삭 제"class="btn">
+							
+							</c:when>
+							<c:when test="${session_level eq 'top' && empty t_dto.getA_content()}">
+								<input type="button" onclick="" value="답변 작성" class="btn">
+							</c:when>
+							<c:when test="${session_level eq 'top' && not empty t_dto.getA_content() }">
+								
+								<input type="button" onclick="goAnswerDelete()" value="답 변 삭 제" class="btn">
+								<span class="answerButt" >답변 수정</span> 
+								
+							</c:when>
+						</c:choose>	
 				</div>
 		
 		</div>
@@ -313,15 +294,17 @@ h1,h2,h3,h4,h5,h6 {font-weight:normal; font-size:16px;}
 .waiting {background:#0489B1; color:#fff;padding:5px 8px;}
 
 .board_view {margin-top:100px; width:1100px;}
-.board_view h2 {margin-bottom:16px; font-size:32px; letter-spacing:-1px; text-align:center;}
+.board_view h2 {margin-bottom: 16px;
+    font-size: 30px;
+    letter-spacing: -1px;}
 .board_view .info {font-size:18px; text-align:center;}
 .board_view .info .user {color:#007dc6;}
 .board_view .info .answerr {color:#00616b; font-size:20px;}
 .board_view .info .questionn {color:#ff318d; font-size:20px;}
 
 
-.board_body {padding:70px 120px; border-top:1px solid #ddd; border-bottom:1px solid #ddd; margin-top:35px;}
-.board_body .texta {padding:10px 10px; border:0px; resize:none; width:900px; height:300px; font-size:15px; text-align:left;}
+.board_body {padding: 70px 0px; border-top:1px solid #ddd; border-bottom:1px solid #ddd; margin-top:35px;}
+.board_body .texta {padding:10px 10px; border:0px; resize:none; width:900px; height:300px; font-size:17px; text-align:left;}
 .board_pds {padding:20px 120px; border-top:1px solid #ddd;  margin-top:35px; }
 .board_body p {margin-bottom:20px;}
 

@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import common.Command;
 import common.CommonUtil;
 import dao.Dona_dao;
+import dao.Manager_dao;
 import dto.Dona_dto;
 
 public class DonaList implements Command {
@@ -14,6 +15,10 @@ public class DonaList implements Command {
 	@Override
 	public void execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
+		Manager_dao managerdao = new Manager_dao();
+		request.setAttribute("Vol_list", managerdao.getVolToday());
+		request.setAttribute("list", managerdao.getSearchList());
+		
 		Dona_dao dao = new Dona_dao();
 		//검색기능q
 		

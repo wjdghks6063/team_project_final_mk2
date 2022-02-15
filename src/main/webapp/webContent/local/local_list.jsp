@@ -83,7 +83,7 @@
 					</li>
                 </a>
                 
-                <a href="javascript:goSearch('volulteer')">
+                <a href="javascript:goSearch('volunteer')">
 					<li>
 						<h1 class="menu-bar">volunteer</h1>봉사
 					</li>

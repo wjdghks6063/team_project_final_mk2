@@ -98,8 +98,10 @@
 		
 	  </div>
 			</form>
-								<input type="button" onclick="goSave()" value="수 정" class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
-								<input type="button" onclick="goList()" value="목 록"class="btn" style="background-color:#f0f0f0;font-family: 'Dongle';">
+					<div class="button_group">
+						<input type="button" onclick="goSave()" value="수 정" class="btn">
+						<input type="button" onclick="goList()" value="목 록"class="btn">
+					</div>
 </div>
 			
 <style>

@@ -127,7 +127,7 @@
 
 </form>
 <!--서브 헤더 -->
-	<div class="sub-header sub-header-give">
+	<div class="sub-header sub-header-vol">
 		<h1 class="sub-title"><span class="text">봉 사</span></h1>
 		<span class="deco-box"><i class="deco-1"></i><i class="deco-2"></i></span>
 	</div>

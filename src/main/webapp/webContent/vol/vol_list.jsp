@@ -183,15 +183,21 @@ a.card_today_inner:hover {
           
 		  <ul class="donation-img-list">
           	<li class="card_today">
+        	<c:forEach items="${Vol_list}" var="vol_list">
+				<c:set var="total_vol" value="${vol_list.getEnd_vol()}" />
+				<c:set var="total_vol_people" value="${vol_list.getTotal_vol()}" />
 		  		<a href="/introduction/DonationStatusGuide" class="card_today_inner">
 		  			<span class="label_today">Today</span> <strong class="card_today_title">오늘 함께한 봉사단</strong> 
-		  			<span class="card_today_text"><strong class="point"><span class="scrollnumber" id="lines4">9,650</span>개</strong>의 봉사단체와<br>
+		  			<span class="card_today_text"><strong class="point">
+		  				<span class="scrollnumber" id="lines4"><fmt:formatNumber  pattern="###,###,###,###" value="${vol_list.getEnd_vol()}"/></span>개</strong>의 봉사단체와<br>
 			  			<strong class="point">
-			  				<span class="scrollnumber" id="lines5">86,140,200</span>명
+			  				<span class="scrollnumber" id="lines5"><fmt:formatNumber  pattern="###,###,###,###" value="${vol_list.getTotal_vol()}"/></span>명
 		  				</strong>이<br>함께 하였습니다.
 	  				</span>
   				</a>
+  			</c:forEach>	
   			</li>
+  			
                 
 			<c:forEach items="${t_dtos}" var="dtos">	
                 <li class="donation-card-list">

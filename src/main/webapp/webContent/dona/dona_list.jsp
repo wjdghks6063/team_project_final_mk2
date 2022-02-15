@@ -176,11 +176,16 @@ a.card_today_inner:hover {
 			 <div class="donation-box">
 		  <ul class="donation-img-list">
                <li class="card_today">
+               		<c:forEach items="${list}" var="list">
+	            		<c:set var="total_do_people" value="${total_do_people + list.getDo_total()}" />
+	            		<c:set var="total_money" value="${total_money + list.getItem_money()}" />
+            		</c:forEach>
 			  		<a href="/introduction/DonationStatusGuide" class="card_today_inner">
 			  			<span class="label_today">Today</span> <strong class="card_today_title">오늘 함께한 기부금</strong> 
-			  			<span class="card_today_text"><strong class="point"><span class="scrollnumber" id="lines4">9,650</span>명</strong>이<br>
+			  			<span class="card_today_text"><strong class="point"><span class="scrollnumber" id="lines4">
+			  				<fmt:formatNumber  pattern="###,###,###,###" value="${total_do_people}"/></span> 명</strong>이<br>
 				  			<strong class="point">
-				  				<span class="scrollnumber" id="lines5">86,140,200</span>원
+				  				<span class="scrollnumber" id="lines5"><fmt:formatNumber  pattern="###,###,###,###" value="${total_money}"/></span>원
 			  				</strong>을<br>기부하였습니다.
 		  				</span>
 	  				</a>
@@ -209,14 +214,14 @@ a.card_today_inner:hover {
                              	<c:choose>
                              		<c:when test="${gage < 100 }"> 
                            				<strong class="donation-parameter-num"><fmt:formatNumber  pattern="###" value="${gage}" /> % </strong>
-			                            <strong class="donation-parameter-money"><span style="color:#10c838;font-size:15px;">₩ <fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
-			                            / <span style="color:#c0c0c0;font-size:14px;">₩ <fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/></span></strong>
+			                            <strong class="donation-parameter-money"><span style="color:#10c838;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
+			                            / <span style="color:#c0c0c0;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/> 원</span></strong>
                            			</c:when>
                            			
                            			<c:when test="${gage >= 100 }"> 
                            				<strong class="donation-parameter-num2"><fmt:formatNumber  pattern="###" value="${gage}" /> % </strong>
-			                            <strong class="donation-parameter-money"><span style="color: #00BFFF;font-size:15px;">₩ <fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
-			                            / <span style="color:#c0c0c0;font-size:14px;">₩ <fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/></span></strong>
+			                            <strong class="donation-parameter-money"><span style="color: #00BFFF;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getTotal()}"/></span>
+			                            / <span style="color:#c0c0c0;font-size:15px;"><fmt:formatNumber  pattern="###,###,###,###" value="${dtos.getGoal()}"/> 원</span></strong>
                            			</c:when>
                            		</c:choose>
                             
